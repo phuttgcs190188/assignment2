@@ -1,0 +1,496 @@
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+:root{
+  --dark: #2b2d42;
+  --light: #adb5bd;
+  --border: #dee2e6;
+  --border-btn: #edf2f4;
+}
+
+.top-nav{
+  height: 70px;
+  padding: 1rem 0;
+  background: rgb(182,134,211);
+  background: linear-gradient(90deg, rgba(182,134,211,1) 0%, rgba(246,33,33,1) 34%, rgba(248,249,82,1) 95%);
+}
+.top-nav__menu{
+  display: flex;
+  flex-flow: row nowrap; 
+  /*align-items: center;*/
+  float: left;
+  padding: 0; 
+  margin: 0;
+  list-style-type: none;
+  margin-right: 100px;
+  padding-left: 50px;
+  
+}   
+
+.top-nav__menu>li{
+  margin-right: 3rem;
+  padding-top: 0.5rem;
+}
+
+.top-nav__menu>li>a{
+  text-decoration: none;
+  font-family: 'Roboto';
+  list-style: none;
+  line-height: 20px;
+  font-size: 20px !important;
+  text-align: center;
+  color:white;
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.top-nav__menu>li>a:hover{
+  color: black;
+}
+
+ul.sub-menu{
+  width: 300px;
+  background: linear-gradient(90deg, rgba(182,134,211,1) 0%, rgba(246,33,33,1) 34%, rgba(248,249,82,1) 95%);
+  min-height: 120px;
+  display: none;
+  position: absolute;
+}
+ul.sub-menu li{
+  list-style: none;
+}
+ul.sub-menu li a{
+  color:white;
+  text-decoration: none;
+  display: block;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-size: 20px ;
+  border-top: 1px solid #E6E6FA;
+  line-height: 60px;
+  text-indent: 5px;
+}
+ul.sub-menu li a:hover{
+  color: #000;
+}
+
+ul.top-nav__menu>li:hover ul.sub-menu{
+  display: block;
+}
+
+.hero{
+  background-image: url("../imgs/Dragon_Ball.jpg");
+  background-repeat: no-repeat;
+  padding-top : 10px;
+  padding-bottom : 48px;
+  height: 217px;
+  margin-left: 398px;
+}
+
+.container-fluid{
+  padding-left: 239px;
+}
+
+h1{
+  color:rgb(51, 51, 51);  
+  font-family: 'Calibri';
+}
+
+main{
+  margin: 0;
+  padding-top: 3rem;
+  box-sizing: border-box;
+  height: 2400px;
+}
+.main-top{
+  padding-bottom: 20px;
+}
+a{
+  text-decoration: none;
+}
+
+b{
+  background-color: white;
+  padding: 0 7px;
+}
+
+.row{
+  padding-top:1rem;
+  height: 500px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.col{
+  padding-top:2rem;
+  width: 286px;
+}
+.h3-title{
+  padding-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  line-height: 16px;
+  overflow: hidden;
+  color: #111;
+
+}
+
+.wp-price{
+  font-family: 'Roboto','Arial',sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.ins{
+  color: #f00;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.del{
+  color: #999;
+  text-decoration: line-through;
+  font-size: 15px;
+}
+.row6{
+  display: flex;
+  
+}
+.app-footer{
+  background: rgb(182,134,211);
+  background: linear-gradient(90deg, rgba(182,134,211,1) 0%, rgba(246,33,33,1) 34%, rgba(248,249,82,1) 95%);
+  padding-top: 4rem ;
+  padding-bottom: 2rem;
+ 
+  
+}
+.app-footer__logo{
+  padding-left: 7rem;
+}
+.app-footer__social-list{
+  display: flex;
+  flex-flow: row nowrap;  
+  align-items: center;
+  padding-top: 1rem; 
+  margin: 0;
+  list-style-type: none;
+ 
+  
+}
+.app-footer__social-list > li{
+  margin-right: 2rem;
+}
+.app-footer__social-list > li > a{
+  color: black;
+}
+
+.app-footer__menu{
+  display: flex;
+  flex-flow: row nowrap; 
+  padding-left: 100px; 
+  margin: 0;
+  list-style-type: none;
+ 
+  
+}   
+
+.app-footer__menu>li{
+  margin-right: 3rem;
+  width: 70px;
+}
+
+.app-footer__menu>li>a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.app-footer__menu>li>a:active{
+  color: deeppink
+}
+
+.app-footer__text{
+  font-size: 15px; 
+  font-style: italic;
+  padding-top: 3rem;
+  float: right
+}
+
+table{
+  border-spacing: 0px;
+  width: 100%;
+}
+
+.table td, .table th{
+  padding: .75em;
+  vertical-align: top;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.table tr:hover{
+  background: linear-gradient(90deg, rgba(182,134,211,1) 0%, rgba(246,33,33,1) 34%, rgba(248,249,82,1) 95%);
+}
+
+.table tr:hover td > a{
+  box-shadow: none;
+}
+
+.table .thead-dark th{
+  color: #fff;
+  background-color: var(--dark) ;
+  border-color: #32383e;
+}
+
+.row4{
+  width: 250px;
+  float: right;
+}
+
+
+
+
+
+body {
+  /*padding-bottom: 3rem;*/
+  color: #5a5a5a;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+ Carousel base class 
+/carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; 
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+#product_category{
+  height:234px;
+  padding-top: 15px;
+  background: #f8f8f8;
+  margin: 0 -100px;
+}
+
+#product_category .product_menu{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 40px;
+}
+
+#product_category .productkind_col{
+  display: flex;
+  position: relative;
+}
+
+#product_category .kind_product {
+  color: #c5161d;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+#product_category .down_icon {
+  width: 8px;
+  height: 9.45px;
+  position: absolute;
+  left: 130px;
+  top: 10px;
+}
+
+#product_category .productkind1_col{
+  display: flex;
+  position: relative;
+}
+
+#product_category .down_icon1 {
+  width: 8px;
+  height: 9.45px;
+  position: absolute;
+  left: 85px;
+  top: 10px;
+}
+
+#product_status{
+  display: flex;
+  padding: 20px 40px;
+}
+
+#product_status .footwear_field{
+  display: flex;
+}
+
+#product_status .bag_field{
+  display: flex;
+}
+
+#product_status .footwear_field:hover,
+#product_status .bag_field{
+  cursor: pointer;
+}
+
+#product_status .all_bag,
+#product_status .all_shoes,
+#product_status .shoes,
+#product_status .bag{
+  width: 179.087px;
+  height: 32.8px;
+  text-align: center;
+}
+
+#product_status .all_shoes{
+  background: #e45745;
+}
+
+#product_status .all_bag,
+#product_status .bag{
+  background: black;
+}
+
+#product_status .bag:hover{
+  opacity: 0.7;
+}
+
+#product_status .shoes{
+  background-color: #e67054;
+}
+
+#product_status .shoes:hover{
+  background: #e45745;
+}
+
+#product_status a{
+  font-size:12px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  line-height:32.8px;
+}
+
+#title{
+  margin-top:20px;
+}
+
+#title .h_title{
+  font-size:24px;
+  font-weight: 700;
+  color: #252a2b;
+  text-align: center;
+  line-height: 28.8px;
+  margin-bottom:5px;
+}
+
+#title .item_count{
+  font-size: 14px;
+  color: #252a2b;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#filter{
+  position: relative;
+  margin-right: 60px;
+}
+
+#filter .boloc{
+  position: absolute;
+  right: 250px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#filter .sapxep{
+  position: absolute;
+  right: 0;
+  font-size: 14px;
+
+}
+
+#filter .down1{
+  height:5px;
+  width:10px;
+}
+
+#arrange{
+  border:none;
+  height:20px
+}

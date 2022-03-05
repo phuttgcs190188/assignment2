@@ -1,0 +1,32 @@
+    
+    <h1 class="btn-success"> Edit user </h1>
+
+    <div class="container">
+                
+        <form  action="/user/{{post._id}}?_method=PATCH" method="POST">
+            <input type="hidden" name="_method" value="PATCH">
+            <div class="mb-3">
+                <label for="UserName" class="form-label">Username</label>
+                <input type="text" class="form-control" id="UserName" name="UserName" value="{{post.UserName}}">
+            </div>
+            <div class="mb-3">
+                <label for="Password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="Password" name="Password">
+            </div> 
+            <div class="mb-3">
+                <label for="FullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="FullName" name="FullName" value="{{post.FullName}}">
+            </div>
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="Email" name="Email" value="{{post.Email}}">
+            </div>
+            <div class="mb-3">
+                <label for="PhoneNumber" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" value ="{{post.PhoneNumber}}">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>  
+    </div>

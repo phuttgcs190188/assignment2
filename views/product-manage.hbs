@@ -1,0 +1,111 @@
+
+        <div id ="product_category">
+
+            <div class="product_menu">
+
+                <div class="productkind_col">
+                    <a class="kind_product">CHARACTER'S MODEL</a>
+                    <img class = "down_icon" src="../public/imgs/down icon.png" alt="">
+                </div>
+
+                <div class="productkind1_col">
+                    <a class="kind_product">COMIC</a>
+                    <img class = "down_icon1" src="../public/imgs/down icon.png" alt="">
+                </div>
+            </div>
+
+            <div id="product_status">
+                <div class="footwear_field">
+                    <div class="all_shoes">
+                        <a href="#">All Character's Models</a>
+                    </div>
+                    <div class="shoes">
+                        <a href="#">7 Dragon Balls Models</a>
+                    </div>
+                    <div class="shoes">
+                        <a href="#">One Piece Models</a>
+                    </div>
+                    <div class="shoes">
+                        <a href="#">Naruto Models</a>
+                    </div>
+                </div>
+                
+
+                <div class="bag_field">
+                    <div class="all_bag">
+                        <a href="#">All Comics</a>
+                    </div>
+                    <div class="bag">
+                        <a href="#">7 Dragon Balls Comics</a>
+                    </div>
+                    <div class="bag">
+                        <a href="#">One Piece Comics</a>
+                    </div>
+                    <div class="bag">
+                        <a href="#">Naruto Comics</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="title">
+                <h1 class="h_title">You are viewing all products</h1>
+                <p class="item_count">(100 Products)</p>
+            </div>
+
+            <div id="filter">
+                <div class="boloc">
+                    Filter 
+                    <img class="down1" src="./assets/imgs/down.webp" alt="">
+                </div>
+                <div class="sapxep">
+                    Arrange :
+                    <select name="sap_xep" id="arrange">
+                        <option value="tuychon">Option</option>
+                        <option value="tangdan">Price: Ascending</option>
+                        <option value="giamdan">Price: Descending</option>
+                        <option value="moinhat">Newest</option>
+                        <option value="banchay">Best seller</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+           
+        <div class="container">
+
+            
+            <div class="box-nav d-flex justify-between">
+                <a href="/product/create" class="border-shadow">
+                    <span class="text-gradient"><i class="fas fa-angle-double-left"></i>Add Product </span>
+                </a>
+            </div>
+            <div class="row">
+                {{#each products}}
+                    <div class="col">
+                        <a href = "order"> <img width="281.25px" height="375px" src="{{this.Links}}" /> </a>                      
+                                              
+                        <h3 class= "h3-title">{{this.TenSP}}</h3>
+                        <div class="wp-price">
+                            <div class="price">                               
+                                <span class="ins"> {{this.GiaBan}} đ</span>
+                                <span class="del">{{this.GiaGoc}} đ</span>                                
+                            </div>  
+                            
+                            <div style = "display:flex; justify-content:space-around; padding-top:10px">
+                                 <a class="btn btn-primary" href="/product/edit/{{_id}}" role="button">Update</a>
+                                <form  action="/product/{{this._id}}?_method=DELETE" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="submit" class="btn btn-danger" role="button" value="Delete">
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+
+       
+
+
+

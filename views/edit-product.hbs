@@ -1,0 +1,59 @@
+
+<h1 class="btn-success"> Edit product </h1>
+<div class="container">
+            
+    <form  action="/product/{{post._id}}?_method=PATCH" method="POST">
+        <div class="mb-3">
+            <label for="MaSP" class="form-label">Ma San pham</label>
+            <input type="text" class="form-control" id="MaSP" name="MaSP" value="{{post.MaSP}}">
+        </div>
+        <div class="mb-3">
+            <label for="TenSP" class="form-label">Ten San pham</label>
+            <input type="text" class="form-control" id="TenSP" name="TenSP" value="{{post.TenSP}}" >
+        </div>
+        <div class="mb-3">
+            <label for="Links" class="form-label">Upload hinh anh</label>
+            <input type="text" class="form-control" id="Links" name="Links" value="{{post.Links}}">
+        </div>
+        <div class="mb-3">
+            <label for="GiaBan" class="form-label">Gia ban</label>
+            <input type="number" class="form-control" id="GiaBan" name="GiaBan" value="{{post.GiaBan}}" >
+        </div>
+        <div class="mb-3">
+            <label for="GiaGoc" class="form-label">Gia goc</label>
+            <input type="number" class="form-control" id="GiaGoc" name="GiaGoc" value="{{post.GiaGoc}}">
+        </div>
+        <div class="mb-3">
+            <label for="BaoHanh" class="form-label">Thoi gian bao hanh (thang)</label>
+            <input type="number" class="form-control" value="1" id="BaoHanh" name="BaoHanh" value="{{post.BaoHanh}}">
+        </div>
+        <div class="mb-3">
+            <label for="MoTa" class="form-label">Mo ta</label>
+            <input type="text" class="form-control" id="MoTa" name="MoTa" value="{{post.MoTa}}">
+        </div>
+        <div class="mb-3">
+            <label for="NhomSP" class="form-label">Nhom san pham</label>
+            <input type="text" class="form-control" id="NhomSP" name="NhomSP" value="{{post.NhomSP}}" >
+        </div>
+        <div class="mb-3">
+            <label for="NhaSX" class="form-label">Nha san xuat</label>
+            <input type="text" class="form-control" id="NhaSX" name="NhaSX" value="{{post.NhaSX}}">
+        </div>
+        <div class="mb-3">
+            <label for="NamSX" class="form-label">Nam san xuat</label>
+            <input type="number" class="form-control" id="NamSX" name="NamSX" value="{{post.NamSX}}">
+        </div>
+        <div class="mb-3">
+            <label for="Model" class="form-label">Model</label>
+            <input type="text" class="form-control" id="Model" name="Model" value="{{post.Model}}">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+
+
+  
+</div>
+
+
+

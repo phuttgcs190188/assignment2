@@ -1,0 +1,131 @@
+        <div id ="product_category">
+
+            <div class="product_menu">
+
+                <div class="productkind_col">
+                    <a class="kind_product">CHARACTER'S MODEL</a>
+                    <img class = "down_icon" src="../public/imgs/down icon.png" alt="">
+                </div>
+
+                <div class="productkind1_col">
+                    <a class="kind_product">COMIC</a>
+                    <img class = "down_icon1" src="../public/imgs/down icon.png" alt="">
+                </div>
+            </div>
+
+            <div id="product_status">
+                <div class="footwear_field">
+                    <div class="all_shoes">
+                        <a href="#">All Character's Models</a>
+                    </div>
+                    <div class="shoes">
+                        <a href="#">7 Dragon Balls Models</a>
+                    </div>
+                    <div class="shoes">
+                        <a href="#">One Piece Models</a>
+                    </div>
+                    <div class="shoes">
+                        <a href="#">Naruto Models</a>
+                    </div>
+                </div>
+                
+
+                <div class="bag_field">
+                    <div class="all_bag">
+                        <a href="#">All Comics</a>
+                    </div>
+                    <div class="bag">
+                        <a href="#">7 Dragon Balls Comics</a>
+                    </div>
+                    <div class="bag">
+                        <a href="#">One Piece Comics</a>
+                    </div>
+                    <div class="bag">
+                        <a href="#">Naruto Comics</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="title">
+                <h1 class="h_title">You are viewing all products</h1>
+                <p class="item_count">(100 Products)</p>
+            </div>
+
+            <div id="filter">
+                <div class="boloc">
+                    Filter 
+                    <img class="down1" src="./assets/imgs/down.webp" alt="">
+                </div>
+                <div class="sapxep">
+                    Arrange :
+                    <select name="sap_xep" id="arrange">
+                        <option value="tuychon">Option</option>
+                        <option value="tangdan">Price: Ascending</option>
+                        <option value="giamdan">Price: Descending</option>
+                        <option value="moinhat">Newest</option>
+                        <option value="banchay">Best seller</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+           
+        <div class="container">
+            
+            <div class="row">
+                {{#each products}}
+                    <div class="col">
+                        <a href = "order"> <img width="281.25px" height="375px" src="{{this.Links}}" /> </a>                      
+                                              
+                        <h3 class= "h3-title">{{this.TenSP}}</h3>
+                        <div class="wp-price">
+                            <div class="price">                               
+                                <span class="ins"> {{this.GiaBan}} đ</span>
+                                <span class="del">{{this.GiaGoc}} đ</span>                                
+                            </div>  
+                            <div><span><button onclick="themvao ( '{{this.MaSP}}','{{this.Links}}', '{{this.GiaBan}}','{{this.TenSP}}')">Add to cart</button></span></div>
+                            
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <form action="/order/review" method="POST" id="submitOrder">
+            <input type="text" hidden id="dshang" name="dshang">
+        </form>
+
+
+
+<script>
+    const  dict = new Map();
+    const  setSP = new Set();
+    sl = 0;
+    function themvao(masp, tensp, giaban,links) {
+        sl++;
+        if (setSP.has(masp)) {
+            x = dict.get( masp );
+            x[2]++;
+            dict.set( masp, x );
+        } else {
+            dict.set( masp, [ tensp, giaban, 1, links] );
+            setSP.add(masp);
+        }
+        console.log(dict);
+        console.log(JSON.stringify(Array.from(dict.entries()) ) );
+        
+        
+        var elem = document.getElementById("soluong");
+        elem.innerText = "" + sl + " , " + dict.size + " loai"; 
+
+    }
+
+    function showgiohang() {        
+        console.log(dict);
+        var elem = document.getElementById("dshang");
+        elem.value = JSON.stringify(Array.from(dict.entries()) ) ;
+        var xform = document.getElementById("submitOrder");
+        xform.submit();
+    }
+    
+</script>

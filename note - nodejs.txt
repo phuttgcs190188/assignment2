@@ -1,0 +1,5 @@
+Notes:
+	npm init 
+	npm  i --S express hbs  mongodb  mongoose  body-parser  express-handlebars
+
+npm i --S @handlebars/allow-prototype-access

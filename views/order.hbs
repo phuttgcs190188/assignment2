@@ -1,0 +1,58 @@
+  <div class = "container">
+        <H1 style = "padding-bottom: 30px;">  Order Management </H1>
+
+        <div class="box-nav d-flex justify-between" style = "padding-bottom: 30px;">
+                <a href="/order/create" class="border-shadow">
+                    <span class="text-gradient"><i class="fas fa-angle-double-left"></i>Add Order Information </span>
+                </a>
+            </div>
+
+        <table class="table">
+            
+            <thead class="thead-dark">
+                <tr>
+                    <th>Ma So Order</th>
+                    <th>Ten Khach Hang</th>
+                    <th>So Loai hang</th>
+                    <th>Tong So Tien</th>
+                    <th>Thoi Gian Mua</th>
+                    <th>Ma So Nhan Vien</th>
+                    <th>Xoa</th>
+
+                    
+                                        
+                </tr>
+            </thead>
+            <tbody>
+                
+                {{#each order}}
+                    <tr>
+                    <td>{{this.MaSoOrder}}</td>
+                    <td>{{this.TenKhachHang}}</td>
+                    <td>{{this.SoLoaiHangTrongDon}}</td>
+                    <td>{{this.TongSotien}}đ</td>
+                    <td>{{this.ThoiGianMua}}</td>
+                    <td>{{this.MaSoNV}}</td> 
+                    <td>
+                        <form  action="/order/{{this._id}}?_method=DELETE" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="submit" class="btn btn-danger" role="button" value="Delete">
+
+                                </form>
+                    </td> 
+
+                    </tr>
+                {{/each}}  
+               
+                              
+            </tbody>
+        </table>
+    
+    
+
+           
+            
+    
+
+           
+    </div>
