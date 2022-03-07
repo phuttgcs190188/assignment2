@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!--Code by Divinector (www.divinectorweb.com)-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to Create responsive Homepage</title>
+    <link href="https://wallpaperaccess.com/full/3265869.png" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b43c192976.js" crossorigin="anonymous"></script>
+    
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .top-nav{
+  height: 38px;
+  padding: 1rem 0;
+  background: rgb(182,134,211);
+  background: linear-gradient(90deg, rgba(182,134,211,1) 0%, rgba(246,33,33,1) 34%, rgba(248,249,82,1) 95%);
+}
+.top-nav__menu{
+  display: flex;
+  flex-flow: row nowrap; 
+  /*align-items: center;*/
+  float: left;
+  padding: 0; 
+  margin: 0;
+  list-style-type: none;
+  margin-right: 100px;
+  padding-left: 50px;
+  
+}   
+
+.top-nav__menu>li{
+  margin-right: 3rem;
+  padding-top: 0.5rem;
+}
+
+.top-nav__menu>li>a{
+  text-decoration: none;
+  font-family: 'Roboto';
+  list-style: none;
+  line-height: 20px;
+  font-size: 20px !important;
+  text-align: center;
+  color:white;
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.top-nav__menu>li>a:hover{
+    color: black;
+}
+
+ul.sub-menu{
+  width: 300px;
+  background: linear-gradient(90deg, rgba(182,134,211,1) 0%, rgba(246,33,33,1) 34%, rgba(248,249,82,1) 95%);
+  min-height: 120px;
+  display: none;
+  position: absolute;
+}
+ul.sub-menu li{
+  list-style: none;
+}
+ul.sub-menu li a{
+  color:white;
+  text-decoration: none;
+  display: block;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-size: 20px ;
+  border-top: 1px solid #E6E6FA;
+  line-height: 60px;
+  text-indent: 5px;
+}
+ul.sub-menu li a:hover{
+  color: #000;
+}
+
+ul.top-nav__menu>li:hover ul.sub-menu{
+  display: block;
+}
+
+.hero{
+  background-image: url("../imgs/Dragon_Ball.jpg");
+  background-repeat: no-repeat;
+  padding-top : 10px;
+  padding-bottom : 48px;
+  height: 217px;
+  margin-left: 398px;
+}
+
+
+
+.container-fluid{
+  padding-left: 273px;
+}
+
+h1{
+  color:rgb(51, 51, 51);  
+  font-family: 'Calibri';
+}
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .welcome-text {
+            background-image: url(https://www.gamingilluminaughty.com/wp-content/uploads/2015/05/1424161722-dragon-ball-e1431239023895.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 650px;
+            text-align: center;
+            
+        }
+     
+        .welcome-text h1 {
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 60px;
+            padding-top: 214px;
+        }
+        .welcome-text h1 span {
+            color: #00fecb;
+        }
+        .welcome-text a {
+            border: 1px solid #fff;
+            padding: 10px 25px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-top: 20px;
+            display: inline-block;
+            color: #fff;
+        }
+        .welcome-text a:hover {
+            background: #fff;
+            color: #333;
+        }
+
+        #products{
+    background-color: #f8f8f8;
+    padding: 0 20px;
+}
+
+#products .pro_container{
+    background-color: #fff;
+    display: flex;
+    padding-top: 20px;
+}
+
+#products a{
+    font-size:14px;
+    color: #333;
+    font-weight: normal;
+    text-decoration:none;
+}
+
+#products .sale_price{
+    color: #F40000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#products .initial_price{
+    color: #333;
+    font-weight: normal;
+}
+
+#products .product_col{
+    width: 25%;
+    padding: 0 24px;
+}
+
+#products .product_picture1{
+    padding-top: 126%;
+    background-image: url(https://i0.wp.com/dreamofanimes.com/wp-content/uploads/2019/11/WeChat-Image_20191122121532.jpg?w=1080&ssl=1);
+    background-size: contain;
+}
+
+#products .product_picture2{
+    padding-top: 126%;
+    background-image: url(https://statuepro.com/wp-content/uploads/2021/08/2_FINAL-1.jpg);
+    background-size: cover;
+}
+
+#products .product_picture3{
+    padding-top: 126%;
+    background-image: url(https://www.ulti-crafts.com/Content/upload/2019377337/201909190910477928872.jpg);
+    background-size: cover;
+}
+
+#products .product_picture4{
+    padding-top: 126%;
+    background-image: url(https://www.otakuhobbitoysph.com/wp-content/uploads/2020/12/1-103.jpg);
+    background-size: contain;
+}
+
+#products .product_picture5{
+    padding-top: 126%;
+    background-image: url(https://ilifemall.com/wp-content/uploads/2020/05/Anime-One-Piece-Ronoa-Zoro-Ghost-3D2Y-Three-knife-Ghost-Cut-Ver.-Sauron-PVC-Action-Collection-Figure-Model-Gift-Luffy-21cm-gallery-02-768x768.jpg);
+    background-size: cover;
+}
+
+#products .product_picture6{
+    padding-top: 126%;
+    background-image: url(https://img-new.cgtrader.com/items/3019479/8efc6d9637/marco-phoenix-one-piece-3d-model-stl.jpg);
+    background-size: cover;
+}
+
+#products .product_picture7{
+    padding-top: 126%;
+    background-image: url(https://615838-1997782-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/12/Wano-Country-Nico-Robin-2.jpg);
+    background-size: cover;
+}
+
+#products .product_picture8{
+    padding-top: 126%;
+    background-image: url(https://ae01.alicdn.com/kf/HTB1x1LYaOLxK1Rjy0Ffq6zYdVXak/One-Piece-POP-Sitting-Boa-Hancock-Action-Figure-1-8-scale-painted-figure-Throne-Ver-Hancock.jpg);
+    background-size: cover;
+}
+
+#products .pro_name{
+    margin-top: 10px;
+    height: 40px;
+    text-align: center;
+}
+
+#products .pro_price{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-background{
+  
+  margin: 50px 100px;
+  border-radius: 38px;
+}
+
+.row{
+  display: flex;
+  justify-content: space-around;
+}
+
+.col-md-7 {
+  width: 625px;
+}
+
+.app-footer{
+  background: rgb(182,134,211);
+  background: linear-gradient(90deg, rgba(182,134,211,1) 0%, rgba(246,33,33,1) 34%, rgba(248,249,82,1) 95%);
+  padding-top: 4rem ;
+  padding-bottom: 2rem;
+ 
+  
+}
+.app-footer__logo{
+  padding-left: 7rem;
+}
+.app-footer__social-list{
+  display: flex;
+  flex-flow: row nowrap;  
+  align-items: center;
+  padding-top: 1rem; 
+  margin: 0;
+  list-style-type: none;
+  padding-left: 50px;
+  
+}
+.app-footer__social-list > li{
+  margin-right: 2rem;
+}
+.app-footer__social-list > li > a{
+  color: black;
+}
+
+.app-footer__menu{
+  display: flex;
+  flex-flow: row nowrap; 
+  padding-left: 100px; 
+  margin: 0;
+  list-style-type: none;
+ 
+  
+}   
+
+.app-footer__menu>li{
+  margin-right: 3rem;
+  width: 70px;
+}
+
+.app-footer__menu>li>a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.app-footer__menu>li>a:active{
+  color: deeppink
+}
+
+.app-footer__text{
+  font-size: 15px; 
+  font-style: italic;
+  padding-top: 3rem;
+  float: right
+}
+
+.row6{
+  display: flex;
+  justify-content: space-around;
+}
+    
+.border-shadow{
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.border-shadow:hover{
+  font-size: 20px;
+}
+
+.box-nav{
+  text-align: center;
+  margin-top: 50px;
+}
+
+      
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="container">  
+                
+                    
+                        <ul class="top-nav__menu" style="padding-left: 250px">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About us</a></li>
+                            <li><a href="/product">Products</a></li>
+                            <li><a href="/order">Order</a></li>
+                            <li><a href="/admin">Admin</a>
+                               <ul class="sub-menu">
+                                   <li><a href="/account">Acount Manage</a></li>
+                                  <li><a href="/user">User Manage</a></li>
+                                  <li><a href="/Contact">Contact Manage</a></li>
+                                  <li><a href="/product/manage">Product Manage</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="/contact/create">Contact</a></li>
+                            <li><a href="/login">Login</a></li>                           
+                            <li><a href="/user/create">Sign up</a></li>
+                    
+                        </ul> 
+                   
+                    
+                    
+                
+            </div>
+        </nav>
+        <section class="hero">
+                <div class="container-fluid">
+                    <h1 class="hero__title"> <b>ATN SHOP</b></h1>
+                </div>
+        </section>
+            
+        </header>
+    <main>
+ 
+        <div class="welcome-text">
+            <h1>ENJOY <span>COLLECTING</span></h1>
+            <a href="/user/create">Register</a>
+        </div>
+
+        <div id ="products">
+          <div class="pro_container">                             
+              <div class="product_col">
+                  <div class="product_picture1"></div>
+                  <h3 class="pro_name">
+                      <a href="#">Son Goku And Dragon God</a>
+                  </h3>
+                  <div class="pro_price">
+                      <p class="sale_price">
+                          220,000đ
+                          <del class="initial_price">
+                              395,000đ
+                          </del>
+                      </p>
+                  </div>
+              </div>
+              <div class="product_col">
+                  <div class="product_picture2"></div>
+                  <h3 class="pro_name">
+                      <a href="#">Son Goku Power Level 4</a>
+                  </h3>
+                  <div class="pro_price">
+                      <p class="sale_price">
+                          220,000đ
+                          <del class="initial_price">
+                              395,000đ
+                          </del>
+                      </p>
+                  </div>
+              </div>
+              <div class="product_col">
+                  <div class="product_picture3"></div>
+                  <h3 class="pro_name">
+                      <a href="#">Vegeta Model 001234</a>
+                  </h3>
+                  <div class="pro_price">
+                      <p class="sale_price">
+                          220,000đ
+                          <del class="initial_price">
+                              395,000đ
+                          </del>
+                      </p>
+                  </div>
+
+                  
+              </div>
+              <div class="product_col">
+                  <div class="product_picture4"></div>
+                  <h3 class="pro_name">
+                      <a href="#">Burter And Guldo Model</a>
+                  </h3>
+                  <div class="pro_price">
+                      <p class="sale_price">
+                          220,000đ
+                          <del class="initial_price">
+                              395,000đ
+                          </del>
+                      </p>
+                  </div>
+
+                  
+              </div>
+              
+          </div>
+
+          <div class="pro_container">                             
+              <div class="product_col">
+                  <div class="product_picture5"></div>
+                  <h3 class="pro_name">
+                      <a href="#">Luffy Supper Power Model</a>
+                  </h3>
+                  <div class="pro_price">
+                      <p class="sale_price">
+                          220,000đ
+                          <del class="initial_price">
+                              395,000đ
+                          </del>
+                      </p>
+                  </div>
+
+                  
+              </div>
+              <div class="product_col">
+                  <div class="product_picture6"></div>
+                  <h3 class="pro_name">
+                      <a href="#">Beautiful Phoenix Marco Model</a>
+                  </h3>
+                  <div class="pro_price">
+                      <p class="sale_price">
+                          220,000đ
+                          <del class="initial_price">
+                              395,000đ
+                          </del>
+                      </p>
+                  </div>
+
+                  
+              </div>
+              <div class="product_col">
+                  <div class="product_picture7"></div>
+                  <h3 class="pro_name">
+                      <a href="#">Model Lady Nico Robin</a>
+                  </h3>
+                  <div class="pro_price">
+                      <p class="sale_price">
+                          220,000đ
+                          <del class="initial_price">
+                              395,000đ
+                          </del>
+                      </p>
+                  </div>
+
+                  
+              </div>
+              <div class="product_col">
+                  <div class="product_picture8"></div>
+                  <h3 class="pro_name">
+                      <a href="#">Beautiful Boa Hancock Model</a>
+                  </h3>
+                  <div class="pro_price">
+                      <p class="sale_price">
+                          220,000đ
+                          <del class="initial_price">
+                              395,000đ
+                          </del>
+                      </p>
+                  </div>
+
+                  
+              </div>
+
+              
+              
+          </div>
+  
+        </div>
+
+        <div class="box-nav d-flex justify-between">
+          <a href="/product" class="border-shadow">
+              <span class="text-gradient"><i class="fas fa-angle-double-left"></i> See all products </span>
+          </a>
+        </div>
+      
+        <section class="section-background" style="background-color: #555;  color:#E6E6FA; height:320px; padding-top:70px">
+          <div class="container">
+               <div class="row" >
+                    <div class="col-md-offset-1 col-md-4 col-xs-12 pull-right">
+                         <img style="width:500px; height: 250px; border-radius:30px;" src="https://p1-ssl.vatera.hu/photos/97/41/dragon-ball-figuraszett-1989-5db-egyben-e5bb_7_big.jpg?v1" >
+                    </div>
+
+                    <div class="col-md-7">
+                         <div class="about-info">
+                              <h2>Anime Figures - Let’s Figure It Out!</h2>
+
+                              <figure>
+                                   <figcaption>
+                                        <p>Anime figures from ATN Shop, if you are looking for the best place to buy anime figures our Japanese anime figures are more than just collectibles they’re a fundamental part of otaku culture!</p>
+                                        <br>
+                                        <p>Characters from your favorite animes, mangas, and video games are transformed and brought to life as three-dimensional anime statues and are perfect for decorating your space.</p>
+                                   </figcaption>
+                              </figure>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+    </main>
+    <footer>
+      <section class="app-footer">
+          <div class="container">
+              <div class="row6">
+                  <div class="col4">
+                      
+                     <div class = "app-footer__logo-wrapper">
+                          <div class = "app-footer__logo">
+                            <img src="https://www.opticsplanet.com/gearexpert/wp-content/uploads/2015/05/atn-logo.png" alt="See the source image" class=" nofocus" tabindex="0" aria-label="See the source image" data-bm="21" width="127spx" height="100px">
+
+                          </div>
+                          <ul class="app-footer__social-list">
+                              <li><a href="#"><i class= "fab fa-facebook-f"></i></a></li>
+                              <li><a href="#"><i class= "fab fa-youtube"></i></a></li>
+                              <li><a href="#"><i class= "fab fa-twitter"></i></a></li>
+                              <li><a href="#"><i class= "fab fa-instagram"></i></a></li>
+                              <li><a href="#"><i class= "fab fa-whatsapp"></i></a></li>
+                              <li><a href="#"><i class= "fab fa-weibo"></i></a></li>
+                          </ul>
+                      </div>
+                     
+                  </div>
+                  <div class="col4">
+                      <ul class="app-footer__menu">                    
+                          <li><a href="/">Home</a></li>
+                          <li><a href="/contact">Contact</a></li>
+                          <li style = "width:150px"><a href="/user">User Management</a></li>
+                           <li><a href="/product">Products</a></li>
+                          <li><a href="/order">Order</a></li>
+                          
+                           
+                          
+                     </ul>
+                     
+                      
+                  </div>
+              </div>
+          </div>
+      </section>
+  </footer>
+</body>
+</html>

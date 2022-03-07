@@ -1,0 +1,50 @@
+
+         <div class="table-title">
+            
+                    <div class="col-sm-5">
+                        <h2>Contact <b>Management</b></h2>
+                    </div>
+                    
+            
+        </div>
+
+
+        <div class="container">
+        
+            <div class="row">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                            <th>Index</th>
+                            <th>FullName</th>
+                            <th>Email</th>
+                            <th>PhoneNumber</th>
+                            <th>Messages</th>
+                            <th>Action</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each contact}}
+                            <tr>
+                                <th scope="row"> {{@key}}</th>
+                                <td>{{this.FullName}}</td>
+                                <td>{{this.Email}}</td>
+                                <td>{{this.PhoneNumber}}</td>
+                                <td>{{this.Messages}}</td>
+                                
+                                <td>                                 
+                                    
+                                    <form  action="/contact/{{this._id}}?_method=DELETE" method="POST">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <input type="submit" class="btn btn-danger" role="button" value="Delete">
+                                    </form>                                   
+
+
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+            </div>
+        </div>

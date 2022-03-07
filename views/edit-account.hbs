@@ -1,0 +1,33 @@
+    <div class="col-sm-5">
+        <h2 style= "padding-left:60px;">Update <b>Account</b></h2>
+    </div>
+
+    <div class="container">
+                
+        <form  action="/account/{{post._id}}?_method=PATCH" method="POST">
+            <input type="hidden" name="_method" value="PATCH">
+            <div class="mb-3">
+                <label for="UserName" class="form-label">Username</label>
+                <input type="text" class="form-control" id="UserName" name="UserName" value="{{post.UserName}}">
+            </div>
+            <div class="mb-3">
+                <label for="Password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="Password" name="Password">
+            </div> 
+            <div class="mb-3">
+                <label for="FullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="FullName" name="FullName" value="{{post.FullName}}">
+            </div>
+            <div class="mb-3">
+                <label for="Role" class="form-label">Role</label>
+                <input type="text" class="form-control" id="Role" name="Role" value="{{post.Role}}">
+            </div>
+            <div class="mb-3">
+                <label for="imglink" class="form-label">Image</label>
+                <input type="text" class="form-control" id="imglink" name="imglink" value ="{{post.imglink}}">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>  
+    </div>
